@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICTE101A's Code Snipper</title>
+    <link rel="stylesheet" href="codesnippet.css">
+</head>
+<body>
+
+<div class="container">
+    <aside class="sidebar">
+        <h1>ICTE101A's Code Snipper</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active" onclick="showPage('home', this)">Home</a></li>
+            </ul>
+
+            <span class="section-title">Code Snipper</span>
+            <ul>
+                <li><a href="#" class="nav-link" onclick="showPage('css', this)">CSS</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('html', this)">HTML</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('js', this)">JS</a></li>
+            </ul>
+
+            <span class="section-title">Guides</span>
+            <ul>
+                <li><a href="#" class="nav-link" onclick="showPage('about', this)">About</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('faq', this)">FAQ</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main id="home" class="page active">
+        <h1>Hello :D</h1>
+        <p>Welcome to our project, our very own code snipper!</p>
+        <p>Do enjoy your stay! (even if it is a bit scuffed)</p>
+    </main>
+
+<main id="html" class="page">
+        <h2>Example</h2>
+
+        <div class="code-container">
+            <button class="copy-btn" data-target="html-code">Copy</button>
+
+        <pre><code id="html-code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;This is an example of an heading.&lt;/h1&gt;
+    &lt;p&gt;This is an example of an paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+        </div>
+    </main>
+
+    <main id="css" class="page">
+        <h2>Example</h2>
+
+        <div class="code-container">
+            <button class="copy-btn" data-target="css-code">Copy</button>
+
+        <pre><code id="css-code">
+body {
+    background-color: #444444;
+    color: white;
+    font-family: Arial;
+}
+
+h1 {
+    color: #00ff00;
+    text-align: center;
+}
+        </code></pre>
+        </div>
+    </main>
+
+    <main id="js" class="page">
+        <h2>Example</h2>
+
+        <div class="code-container">
+            <button class="copy-btn" data-target="js-code">Copy</button>
+
+        <pre><code id="js-code">
+function greet() {
+    alert("Good day, Group 11!");
+}
+
+greet();
+        </code></pre>
+        </div>
+    </main>
+
+    <main id="about" class="page">
+        <p>Made by Group 11, ICTE101A.<p>
+    </main>
+
+    <main id="faq" class="page">
+        <p>FAQ here...</p>
+    </main>
+</div>
+<script>
+function showPage(pageID, link) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+    document.getElementById(pageID).classList.add('active');
+
+    document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
+    link.classList.add('active');
+    
+}
+document.querySelectorAll(".copy-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-target");
+        const codeText = document.getElementById(targetId).innerText;
+
+        navigator.clipboard.writeText(codeText).then(() => {
+            const oldText = button.innerText;
+            button.innerText = "✔ Code copied";
+            setTimeout(() => {
+                button.innerText = oldText;
+            }, 1200);
+        });
+    });
+});
+</script>
+</body>
+</html>
