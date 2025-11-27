@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Stack Sans Headline';
+    background-color: #1f232a;
+    color: #b4b4b4;
+}
+
+.layout {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    height: 560px;
+    background-color: #2c2f33;
+    padding: 20px;
+    border-radius: 16px;
+    margin-left: 16px;
+    margin-top: 6px;
+    border: 1px solid #424447;
+}
+
+.sidebar h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 10px 0;
+    color: #b4b4b4;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav a:hover {
+    color: #6533cb;
+    font-weight: bold;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+section {
+    display: none;
+}
+
+#home:target,
+#snippets:target,
+#about:target,
+#faq:target {
+    display: block;
+}
+
+#home {
+    display: block;
+    width: 900px;
+    height: 540px;
+    background: #2c2f33;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #424447;
+    margin-top: -12px;
+    display: none;
+}
+
+.tabs {
+    margin-top: 20px;
+}
+
+.tabs input {
+    display: none;
+}
+
+.tabs label {
+    padding: 10px 20px;
+    background-color: #2c2f33;
+    color: white;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid #424447;
+    margin-right: 5px;
+    margin-top: -8px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.tabs label:hover {
+    background-color: #6533cb;
+}
+
+.tabs input:checked + label {
+    background-color: #6533cb;
+    border: 1px solid #424447;
+}
+
+.tab-content {
+    display: none;
+    background-color: #2c2f33;
+    padding: 20px;
+    border-radius: 0px 20px 20px 20px;
+    margin-top: -1px;
+    border: 1px solid #424447;
+    height: 400px;
+}
+
+#tab-html:checked ~ #html-content,
+#tab-css:checked ~ #css-content,
+#tab-js:checked ~ #js-content {
+    display: block;
+}
+
+pre {
+    background-color: #000000;
+    padding: 15px;
+    margin-top: 16px;
+    border-radius: 12px;
+    height: 340px;
+}
+
+code {
+    color: #37c871;
+    font-size: 18px;
+}
+
+#about {
+    width: 900px;
+    height: 540px;
+    background-color: #2c2f33;
+    border: 1px solid #424447;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: -10px;
+}
+
+#faq {
+    width: 900px;
+    height: 540px;
+    background-color: #2c2f33;
+    border: 1px solid #424447;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: -10px;
+}

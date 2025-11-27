@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICTE101A's Code Snipper</title>
+    <link rel="stylesheet" href="codesnippet.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <h1>ICTE101A's Code Snipper</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#snippets">Code Snippets</a>
+            <a href="#about">About</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+
+        <section id="home">
+            <h1>Hello :D</h1>
+            <p>Welcome to our project, our very own code snipper!</p>
+            <p>Do enjoy your stay! (even if it is a bit scuffed)</p>
+        </section>
+
+        <section id="snippets">
+            <h1>Examples</h1>
+
+            <div class="tabs">
+
+                <input type="radio" name="tab" id="tab-html" checked>
+                <label for="tab-html">HTML</label>
+
+                <input type="radio" name="tab" id="tab-css">
+                <label for="tab-css">CSS</label>
+
+                <input type="radio" name="tab" id="tab-js">
+                <label for="tab-js">JavaScript</label>
+
+<div class="tab-content" id="html-content">
+<pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+</div>
+
+<div class="tab-content" id="css-content">
+<pre><code>
+    body {
+        background: #222;
+        color: white;
+        font-family: Arial;
+    }
+
+    h1 {
+        text-align: center;
+    }
+</code></pre>
+</div>
+
+<div class="tab-content" id="js-content">
+<pre><code>
+    function greet() {
+        alert("Hello ICTE101A!");
+    }
+        greet();
+            </code></pre>
+        </div>
+    </div>
+</section>
+
+        <section id="about">
+            <h1>About</h1>
+            <p>Made by Group 11, ICTE101A.</p>
+        </section>
+
+        <section id="faq">
+            <h1>FAQ</h1>
+            <p>FAQ here...</p>
+        </section>
+    </main>
+</div>
+</body>
+</html>
